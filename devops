@@ -6,4 +6,177 @@ kubernetes - Orchestrastion
 prometheus -- Monitoring & altering
 grafana -- visulisation
 ansible -- Configuration as a management
-terraform -- infrasture as  a service
+terraform -- code as  a service
+
+
+Round robin --> based load balancing 
+
+load balancers of orchestration
+
+Scale up and scale down the number of containers
+
+docker service update --image v2 mysvc
+
+docker service rollback mysvc
+
+Set manager node, worker node, token update, deplying image,
+
+Scale up and scale down
+
+rolling update and rollback
+
+Docker swarm join-token worker
+
+Docker service ps mysvc
+
+docker ps
+
+Docker leave ps
+
+docker node ls
+
+If master is down it will be called headless cluster
+
+Leader goes down then the reachable shall become the manager
+
+Docker swarm leave --force then the worker3 shall become the leader/manager
+
+Docker service ls
+
+
+Creation of Replicas--> Distribution--> Cluster Mode--> Scale up and down --> High Availability --> Rolling update
+
+Docker Swarm are exlusive for Docker only.
+
+Kubernetes can orchestrate other tools where as docker swarm is runtime of docker. Kubernetes is always used with docker.
+
+Horizontal pod scaler
+
+single line commands
+
+Write in YAML in kubernatives to create containers
+
+Kubernetes Master-> Api server, Scheduler, ETCD, Controller Manager
+
+Kubernetes Worker: Kubelets, Kubectl
+
+Kubeadmion---> 10 Containers (API server- Main Components, 50 GB of resources) --> Schedulers (Containers tomcat) --> ETCD -->  
+
+ETCD Extra Database --> complete info of workner node, server ip, number of container running >> daily bkp of ETCD
+
+API server gets the request from Scheduler and and connects to the kubelests 
+
+the Docker is installed in every kublets/control plane and the container is built using the docker image availble in kubelets
+
+Controller manager --> deploy, scale up , down of containers
+
+Kube Proxy --> Port mapping concept --> network rules --> comm among containers
+
+
+Installtion of kubernetes:
+
+1. Hard ways --> Install all components manually
+
+2. Kubeadm way --> Automated way AKS, EKS.
+
+3. ready made clusters --> 
+
+AKS --> Azure Kubernetes service, --> Paid 
+
+EKS --> Elastic Kubernetes service, AWS -Paid
+
+GKE --> Google Kubernetes Engine -->90 days free
+
+Kubectl get nodes -o wide
+
+Pod protect the container , ensure that the containers are always running 
+
+Pods can have mupltiple containers.
+
+Pods can be 5-10 or more running and suggested that the one pods should have single container
+
+Pods is nothing but a container in kubernetes.
+
+
+Team City is like jenkins.
+
+Kubernetes -->redhat, ubuntu, centos, debian
+
+Auto scaling, distribution, scaling up/down, managing the containers --> Orchestration
+
+1 pod can have multiple containers. 1:n, pod:containers
+
+Multicontainer are not generally required.
+
+Kubectl get pods
+
+Kubectl describe pod pod1
+
+press the q to come out of log
+
+Kubectl log2 pod1 -c c2
+
+Kubectl delete pod pod1
+
+In case the container fails the pod tries to restart it.
+
+Replica of pods can be created 
+
+1. HOw many replicas of pods
+
+2. Specify what container should be on the POD?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
