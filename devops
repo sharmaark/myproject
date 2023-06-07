@@ -125,7 +125,41 @@ Replica of pods can be created
 1. HOw many replicas of pods
 
 2. Specify what container should be on the POD?
+_____________________
+Ansible:
+____________________
+Red had tool to create shared resources across VMs.
 
+to size the many VM in single VM.
+
+1. Inventory: Simple text file where host will enter public/private ip address where to do the configuration changes. User can create inventory in his desired location.
+
+Static Inventory: User will enter the IP address.
+Dynamic Inventory: Infra on AWS and placed in the automatic the ip allocation.
+
+2. It is an agentless tool.
+
+3. Modules: Small pythone programs already written and provided by ansible in order to execute ansible.
+
+4. Playbook: it is written in YAML. Consists of Host details, Modules.
+
+5: Host: It is also written in YAML.
+
+6. Ansible Configuration file: Consists of parameters; where are file, playbook, host.
+
+Setup the control m/c (Install the Ansible) --SSH--> Host server --> Work in config file (etc/ansible)
+
+Passwordless SSH setup between 2 linux machine;
+
+1. Select a user for connecting the host server;
+2. vim /etc/ssh/sshd_config  --< set up the password
+3. restart sshd --> set the same setting in the Ansiblehost
+4. ssh-keygen  --> ssh-copy-id -i ec2-user@ipaddress
+Now you can connect the host with controller.
+
+ansible [group_name] - m <module> -a <action>  --> Modules are used for task and playbook is used therefore Key:value format. Key is given by ansible.
+
+adhoc --> not reusable
 
 
 
